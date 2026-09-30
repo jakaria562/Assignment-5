@@ -1,0 +1,970 @@
+<!doctype html>
+<html class=" bg-base-200">
+  <head >
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Assaignment-5</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+      }
+      *{
+        font-family: "Geist", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="">
+    <header>
+
+        <div class="navbar bg-base-100 shadow-sm">
+  <div class="flex-1 pl-10">
+    <a class="btn btn-ghost text-xl"> <span class=" w-[30px]"><img src="assets/github-logo.png" alt=""></span>GitHub Issues Tracker</a>
+  </div>
+  <div class="flex gap-2">
+   <div class="relative">
+  <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-300"></i>
+
+  <input
+    type="text"
+    placeholder="Search..."
+    class="w-full pl-8 pr-3 py-2 border rounded-lg"/>
+</div>
+    <div class="dropdown dropdown-end">
+      <div class=" pl-5 pr-30">
+        <button class="btn btn-primary "><i class="fa-solid fa-plus  text-white"></i> New Issue</button>
+    </div>
+  </div>
+</div>
+      
+    </header>
+    <div class="min-h-screen max-w-5xl  bg-base-200 mx-auto mt-7">
+          <div class=" bg-white shadow-sm pt-3 pb-3 pl-3">
+    <button class="btn btn-soft btn-primary">All</button>
+    <button class="btn btn-soft btn-primary">Open</button>
+    <button class="btn btn-soft btn-primary">Closed</button>
+    </div>
+
+     <div class="shadow-sm bg-base-200  px-4 py-3">
+
+        <div class="flex items-center justify-between shadow  bg-white px-4 py-3 ">
+    <div class="flex items-center gap-3">
+        <div class="p-2 rounded-full bg-slate-200">
+            <img src="assets/Aperture.png" alt="">
+        </div>
+
+        <div>
+            <h3 class="text-sm font-semibold text-gray-900">
+                50 Issues
+            </h3>
+
+            <p class="text-[10px] text-gray-500">
+                Track and manage your project issues
+            </p>
+        </div>
+    </div>
+    <div class="flex items-center gap-4 text-[10px]">
+        <span class="flex items-center gap-1">
+            <span class="w-2 h-2 rounded-full bg-green-500"></span>
+            Open
+        </span>
+
+        <span class="flex items-center gap-1">
+            <span class="w-2 h-2 rounded-full bg-purple-500"></span>
+            Closed
+        </span>
+    </div>
+
+</div>
+       <div class="grid grid-cols-4 gap-2 p-4">
+      
+         <div class="border border-gray-200 border-t-2 border-t-green-500 rounded-sm bg-white shadow-sm">
+
+        <div class="flex justify-between items-center px-3 pt-3">
+            <span class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-500 text-[10px]">
+                ⓘ
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-red-50 text-red-400 text-[9px]">
+                HIGH
+            </span>
+        </div>
+
+       
+        <div class="px-3 py-2">
+            <h3 class="text-[10px] font-semibold text-gray-800">
+                Fix Navigation Menu On Mobile Devices
+            </h3>
+
+            <p class="text-[8px] text-gray-500 mt-3 leading-3">
+                The navigation menu doesn't collapse properly on mobile devices...
+            </p>
+
+           
+            <div class="flex gap-1 mt-2">
+                <span class="px-2 py-1 rounded-full bg-red-50 text-red-500 text-[7px]">
+                     BUG
+                </span>
+
+                <span class="px-2 py-1 rounded-full bg-yellow-50 text-yellow-500 text-[7px]">
+                    HELP WANTED
+                </span>
+            </div>
+
+            <div class="border-t border-gray-200 mt-2 px-3 py-2">
+    <p class="text-[8px] text-gray-500">
+        #1 by <span class="text-gray-700">john_doe</span>
+    </p>
+
+    <p class="text-[8px] text-gray-400 mt-1">
+        11/15/2024
+    </p>
+</div>
+       </div>
+     </div>
+         <div class="border border-gray-200 border-t-2 border-t-green-500 rounded-sm bg-white shadow-sm">
+
+        <div class="flex justify-between items-center px-3 pt-3">
+            <span class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-500 text-[10px]">
+                ⓘ
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-red-50 text-red-400 text-[9px]">
+                HIGH
+            </span>
+        </div>
+
+       
+        <div class="px-3 py-2">
+            <h3 class="text-[10px] font-semibold text-gray-800">
+                Fix Navigation Menu On Mobile Devices
+            </h3>
+
+            <p class="text-[8px] text-gray-500 mt-3 leading-3">
+                The navigation menu doesn't collapse properly on mobile devices...
+            </p>
+
+           
+            <div class="flex gap-1 mt-2">
+                <span class="px-2 py-1 rounded-full bg-red-50 text-red-500 text-[7px]">
+                     BUG
+                </span>
+
+                <span class="px-2 py-1 rounded-full bg-yellow-50 text-yellow-500 text-[7px]">
+                    HELP WANTED
+                </span>
+            </div>
+
+            <div class="border-t border-gray-200 mt-2 px-3 py-2">
+    <p class="text-[8px] text-gray-500">
+        #1 by <span class="text-gray-700">john_doe</span>
+    </p>
+
+    <p class="text-[8px] text-gray-400 mt-1">
+        11/15/2024
+    </p>
+</div>
+       </div>
+     </div>
+         <div class="border border-gray-200 border-t-2 border-t-green-500 rounded-sm bg-white shadow-sm">
+
+        <div class="flex justify-between items-center px-3 pt-3">
+            <span class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-500 text-[10px]">
+                ⓘ
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-red-50 text-red-400 text-[9px]">
+                HIGH
+            </span>
+        </div>
+
+       
+        <div class="px-3 py-2">
+            <h3 class="text-[10px] font-semibold text-gray-800">
+                Fix Navigation Menu On Mobile Devices
+            </h3>
+
+            <p class="text-[8px] text-gray-500 mt-3 leading-3">
+                The navigation menu doesn't collapse properly on mobile devices...
+            </p>
+
+           
+            <div class="flex gap-1 mt-2">
+                <span class="px-2 py-1 rounded-full bg-red-50 text-red-500 text-[7px]">
+                     BUG
+                </span>
+
+                <span class="px-2 py-1 rounded-full bg-yellow-50 text-yellow-500 text-[7px]">
+                    HELP WANTED
+                </span>
+            </div>
+
+            <div class="border-t border-gray-200 mt-2 px-3 py-2">
+    <p class="text-[8px] text-gray-500">
+        #1 by <span class="text-gray-700">john_doe</span>
+    </p>
+
+    <p class="text-[8px] text-gray-400 mt-1">
+        11/15/2024
+    </p>
+</div>
+       </div>
+     </div>
+         <div class="border border-gray-200 border-t-2 border-t-green-500 rounded-sm bg-white shadow-sm">
+
+        <div class="flex justify-between items-center px-3 pt-3">
+            <span class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-500 text-[10px]">
+                ⓘ
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-red-50 text-red-400 text-[9px]">
+                HIGH
+            </span>
+        </div>
+
+       
+        <div class="px-3 py-2">
+            <h3 class="text-[10px] font-semibold text-gray-800">
+                Fix Navigation Menu On Mobile Devices
+            </h3>
+
+            <p class="text-[8px] text-gray-500 mt-3 leading-3">
+                The navigation menu doesn't collapse properly on mobile devices...
+            </p>
+
+           
+            <div class="flex gap-1 mt-2">
+                <span class="px-2 py-1 rounded-full bg-red-50 text-red-500 text-[7px]">
+                     BUG
+                </span>
+
+                <span class="px-2 py-1 rounded-full bg-yellow-50 text-yellow-500 text-[7px]">
+                    HELP WANTED
+                </span>
+            </div>
+
+            <div class="border-t border-gray-200 mt-2 px-3 py-2">
+    <p class="text-[8px] text-gray-500">
+        #1 by <span class="text-gray-700">john_doe</span>
+    </p>
+
+    <p class="text-[8px] text-gray-400 mt-1">
+        11/15/2024
+    </p>
+</div>
+       </div>
+     </div>
+         <div class="border border-gray-200 border-t-2 border-t-green-500 rounded-sm bg-white shadow-sm">
+
+        <div class="flex justify-between items-center px-3 pt-3">
+            <span class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-500 text-[10px]">
+                ⓘ
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-red-50 text-red-400 text-[9px]">
+                HIGH
+            </span>
+        </div>
+
+       
+        <div class="px-3 py-2">
+            <h3 class="text-[10px] font-semibold text-gray-800">
+                Fix Navigation Menu On Mobile Devices
+            </h3>
+
+            <p class="text-[8px] text-gray-500 mt-3 leading-3">
+                The navigation menu doesn't collapse properly on mobile devices...
+            </p>
+
+           
+            <div class="flex gap-1 mt-2">
+                <span class="px-2 py-1 rounded-full bg-red-50 text-red-500 text-[7px]">
+                     BUG
+                </span>
+
+                <span class="px-2 py-1 rounded-full bg-yellow-50 text-yellow-500 text-[7px]">
+                    HELP WANTED
+                </span>
+            </div>
+
+            <div class="border-t border-gray-200 mt-2 px-3 py-2">
+    <p class="text-[8px] text-gray-500">
+        #1 by <span class="text-gray-700">john_doe</span>
+    </p>
+
+    <p class="text-[8px] text-gray-400 mt-1">
+        11/15/2024
+    </p>
+</div>
+       </div>
+     </div>
+         <div class="border border-gray-200 border-t-2 border-t-green-500 rounded-sm bg-white shadow-sm">
+
+        <div class="flex justify-between items-center px-3 pt-3">
+            <span class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-500 text-[10px]">
+                ⓘ
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-red-50 text-red-400 text-[9px]">
+                HIGH
+            </span>
+        </div>
+
+       
+        <div class="px-3 py-2">
+            <h3 class="text-[10px] font-semibold text-gray-800">
+                Fix Navigation Menu On Mobile Devices
+            </h3>
+
+            <p class="text-[8px] text-gray-500 mt-3 leading-3">
+                The navigation menu doesn't collapse properly on mobile devices...
+            </p>
+
+           
+            <div class="flex gap-1 mt-2">
+                <span class="px-2 py-1 rounded-full bg-red-50 text-red-500 text-[7px]">
+                     BUG
+                </span>
+
+                <span class="px-2 py-1 rounded-full bg-yellow-50 text-yellow-500 text-[7px]">
+                    HELP WANTED
+                </span>
+            </div>
+
+            <div class="border-t border-gray-200 mt-2 px-3 py-2">
+    <p class="text-[8px] text-gray-500">
+        #1 by <span class="text-gray-700">john_doe</span>
+    </p>
+
+    <p class="text-[8px] text-gray-400 mt-1">
+        11/15/2024
+    </p>
+</div>
+       </div>
+     </div>
+         <div class="border border-gray-200 border-t-2 border-t-green-500 rounded-sm bg-white shadow-sm">
+
+        <div class="flex justify-between items-center px-3 pt-3">
+            <span class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-500 text-[10px]">
+                ⓘ
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-red-50 text-red-400 text-[9px]">
+                HIGH
+            </span>
+        </div>
+
+       
+        <div class="px-3 py-2">
+            <h3 class="text-[10px] font-semibold text-gray-800">
+                Fix Navigation Menu On Mobile Devices
+            </h3>
+
+            <p class="text-[8px] text-gray-500 mt-3 leading-3">
+                The navigation menu doesn't collapse properly on mobile devices...
+            </p>
+
+           
+            <div class="flex gap-1 mt-2">
+                <span class="px-2 py-1 rounded-full bg-red-50 text-red-500 text-[7px]">
+                     BUG
+                </span>
+
+                <span class="px-2 py-1 rounded-full bg-yellow-50 text-yellow-500 text-[7px]">
+                    HELP WANTED
+                </span>
+            </div>
+
+            <div class="border-t border-gray-200 mt-2 px-3 py-2">
+    <p class="text-[8px] text-gray-500">
+        #1 by <span class="text-gray-700">john_doe</span>
+    </p>
+
+    <p class="text-[8px] text-gray-400 mt-1">
+        11/15/2024
+    </p>
+</div>
+       </div>
+     </div>
+         <div class="border border-gray-200 border-t-2 border-t-green-500 rounded-sm bg-white shadow-sm">
+
+        <div class="flex justify-between items-center px-3 pt-3">
+            <span class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-500 text-[10px]">
+                ⓘ
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-red-50 text-red-400 text-[9px]">
+                HIGH
+            </span>
+        </div>
+
+       
+        <div class="px-3 py-2">
+            <h3 class="text-[10px] font-semibold text-gray-800">
+                Fix Navigation Menu On Mobile Devices
+            </h3>
+
+            <p class="text-[8px] text-gray-500 mt-3 leading-3">
+                The navigation menu doesn't collapse properly on mobile devices...
+            </p>
+
+           
+            <div class="flex gap-1 mt-2">
+                <span class="px-2 py-1 rounded-full bg-red-50 text-red-500 text-[7px]">
+                     BUG
+                </span>
+
+                <span class="px-2 py-1 rounded-full bg-yellow-50 text-yellow-500 text-[7px]">
+                    HELP WANTED
+                </span>
+            </div>
+
+            <div class="border-t border-gray-200 mt-2 px-3 py-2">
+    <p class="text-[8px] text-gray-500">
+        #1 by <span class="text-gray-700">john_doe</span>
+    </p>
+
+    <p class="text-[8px] text-gray-400 mt-1">
+        11/15/2024
+    </p>
+</div>
+       </div>
+     </div>
+         <div class="border border-gray-200 border-t-2 border-t-green-500 rounded-sm bg-white shadow-sm">
+
+        <div class="flex justify-between items-center px-3 pt-3">
+            <span class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-500 text-[10px]">
+                ⓘ
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-red-50 text-red-400 text-[9px]">
+                HIGH
+            </span>
+        </div>
+
+       
+        <div class="px-3 py-2">
+            <h3 class="text-[10px] font-semibold text-gray-800">
+                Fix Navigation Menu On Mobile Devices
+            </h3>
+
+            <p class="text-[8px] text-gray-500 mt-3 leading-3">
+                The navigation menu doesn't collapse properly on mobile devices...
+            </p>
+
+           
+            <div class="flex gap-1 mt-2">
+                <span class="px-2 py-1 rounded-full bg-red-50 text-red-500 text-[7px]">
+                     BUG
+                </span>
+
+                <span class="px-2 py-1 rounded-full bg-yellow-50 text-yellow-500 text-[7px]">
+                    HELP WANTED
+                </span>
+            </div>
+
+            <div class="border-t border-gray-200 mt-2 px-3 py-2">
+    <p class="text-[8px] text-gray-500">
+        #1 by <span class="text-gray-700">john_doe</span>
+    </p>
+
+    <p class="text-[8px] text-gray-400 mt-1">
+        11/15/2024
+    </p>
+</div>
+       </div>
+     </div>
+         <div class="border border-gray-200 border-t-2 border-t-green-500 rounded-sm bg-white shadow-sm">
+
+        <div class="flex justify-between items-center px-3 pt-3">
+            <span class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-500 text-[10px]">
+                ⓘ
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-red-50 text-red-400 text-[9px]">
+                HIGH
+            </span>
+        </div>
+
+       
+        <div class="px-3 py-2">
+            <h3 class="text-[10px] font-semibold text-gray-800">
+                Fix Navigation Menu On Mobile Devices
+            </h3>
+
+            <p class="text-[8px] text-gray-500 mt-3 leading-3">
+                The navigation menu doesn't collapse properly on mobile devices...
+            </p>
+
+           
+            <div class="flex gap-1 mt-2">
+                <span class="px-2 py-1 rounded-full bg-red-50 text-red-500 text-[7px]">
+                     BUG
+                </span>
+
+                <span class="px-2 py-1 rounded-full bg-yellow-50 text-yellow-500 text-[7px]">
+                    HELP WANTED
+                </span>
+            </div>
+
+            <div class="border-t border-gray-200 mt-2 px-3 py-2">
+    <p class="text-[8px] text-gray-500">
+        #1 by <span class="text-gray-700">john_doe</span>
+    </p>
+
+    <p class="text-[8px] text-gray-400 mt-1">
+        11/15/2024
+    </p>
+</div>
+       </div>
+     </div>
+         <div class="border border-gray-200 border-t-2 border-t-green-500 rounded-sm bg-white shadow-sm">
+
+        <div class="flex justify-between items-center px-3 pt-3">
+            <span class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-500 text-[10px]">
+                ⓘ
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-red-50 text-red-400 text-[9px]">
+                HIGH
+            </span>
+        </div>
+
+       
+        <div class="px-3 py-2">
+            <h3 class="text-[10px] font-semibold text-gray-800">
+                Fix Navigation Menu On Mobile Devices
+            </h3>
+
+            <p class="text-[8px] text-gray-500 mt-3 leading-3">
+                The navigation menu doesn't collapse properly on mobile devices...
+            </p>
+
+           
+            <div class="flex gap-1 mt-2">
+                <span class="px-2 py-1 rounded-full bg-red-50 text-red-500 text-[7px]">
+                     BUG
+                </span>
+
+                <span class="px-2 py-1 rounded-full bg-yellow-50 text-yellow-500 text-[7px]">
+                    HELP WANTED
+                </span>
+            </div>
+
+            <div class="border-t border-gray-200 mt-2 px-3 py-2">
+    <p class="text-[8px] text-gray-500">
+        #1 by <span class="text-gray-700">john_doe</span>
+    </p>
+
+    <p class="text-[8px] text-gray-400 mt-1">
+        11/15/2024
+    </p>
+</div>
+       </div>
+     </div>
+         <div class="border border-gray-200 border-t-2 border-t-green-500 rounded-sm bg-white shadow-sm">
+
+        <div class="flex justify-between items-center px-3 pt-3">
+            <span class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-500 text-[10px]">
+                ⓘ
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-red-50 text-red-400 text-[9px]">
+                HIGH
+            </span>
+        </div>
+
+       
+        <div class="px-3 py-2">
+            <h3 class="text-[10px] font-semibold text-gray-800">
+                Fix Navigation Menu On Mobile Devices
+            </h3>
+
+            <p class="text-[8px] text-gray-500 mt-3 leading-3">
+                The navigation menu doesn't collapse properly on mobile devices...
+            </p>
+
+           
+            <div class="flex gap-1 mt-2">
+                <span class="px-2 py-1 rounded-full bg-red-50 text-red-500 text-[7px]">
+                     BUG
+                </span>
+
+                <span class="px-2 py-1 rounded-full bg-yellow-50 text-yellow-500 text-[7px]">
+                    HELP WANTED
+                </span>
+            </div>
+
+            <div class="border-t border-gray-200 mt-2 px-3 py-2">
+    <p class="text-[8px] text-gray-500">
+        #1 by <span class="text-gray-700">john_doe</span>
+    </p>
+
+    <p class="text-[8px] text-gray-400 mt-1">
+        11/15/2024
+    </p>
+</div>
+       </div>
+     </div>
+         <div class="border border-gray-200 border-t-2 border-t-green-500 rounded-sm bg-white shadow-sm">
+
+        <div class="flex justify-between items-center px-3 pt-3">
+            <span class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-500 text-[10px]">
+                ⓘ
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-red-50 text-red-400 text-[9px]">
+                HIGH
+            </span>
+        </div>
+
+       
+        <div class="px-3 py-2">
+            <h3 class="text-[10px] font-semibold text-gray-800">
+                Fix Navigation Menu On Mobile Devices
+            </h3>
+
+            <p class="text-[8px] text-gray-500 mt-3 leading-3">
+                The navigation menu doesn't collapse properly on mobile devices...
+            </p>
+
+           
+            <div class="flex gap-1 mt-2">
+                <span class="px-2 py-1 rounded-full bg-red-50 text-red-500 text-[7px]">
+                     BUG
+                </span>
+
+                <span class="px-2 py-1 rounded-full bg-yellow-50 text-yellow-500 text-[7px]">
+                    HELP WANTED
+                </span>
+            </div>
+
+            <div class="border-t border-gray-200 mt-2 px-3 py-2">
+    <p class="text-[8px] text-gray-500">
+        #1 by <span class="text-gray-700">john_doe</span>
+    </p>
+
+    <p class="text-[8px] text-gray-400 mt-1">
+        11/15/2024
+    </p>
+</div>
+       </div>
+     </div>
+         <div class="border border-gray-200 border-t-2 border-t-green-500 rounded-sm bg-white shadow-sm">
+
+        <div class="flex justify-between items-center px-3 pt-3">
+            <span class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-500 text-[10px]">
+                ⓘ
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-red-50 text-red-400 text-[9px]">
+                HIGH
+            </span>
+        </div>
+
+       
+        <div class="px-3 py-2">
+            <h3 class="text-[10px] font-semibold text-gray-800">
+                Fix Navigation Menu On Mobile Devices
+            </h3>
+
+            <p class="text-[8px] text-gray-500 mt-3 leading-3">
+                The navigation menu doesn't collapse properly on mobile devices...
+            </p>
+
+           
+            <div class="flex gap-1 mt-2">
+                <span class="px-2 py-1 rounded-full bg-red-50 text-red-500 text-[7px]">
+                     BUG
+                </span>
+
+                <span class="px-2 py-1 rounded-full bg-yellow-50 text-yellow-500 text-[7px]">
+                    HELP WANTED
+                </span>
+            </div>
+
+            <div class="border-t border-gray-200 mt-2 px-3 py-2">
+    <p class="text-[8px] text-gray-500">
+        #1 by <span class="text-gray-700">john_doe</span>
+    </p>
+
+    <p class="text-[8px] text-gray-400 mt-1">
+        11/15/2024
+    </p>
+</div>
+       </div>
+     </div>
+         <div class="border border-gray-200 border-t-2 border-t-green-500 rounded-sm bg-white shadow-sm">
+
+        <div class="flex justify-between items-center px-3 pt-3">
+            <span class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-500 text-[10px]">
+                ⓘ
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-red-50 text-red-400 text-[9px]">
+                HIGH
+            </span>
+        </div>
+
+       
+        <div class="px-3 py-2">
+            <h3 class="text-[10px] font-semibold text-gray-800">
+                Fix Navigation Menu On Mobile Devices
+            </h3>
+
+            <p class="text-[8px] text-gray-500 mt-3 leading-3">
+                The navigation menu doesn't collapse properly on mobile devices...
+            </p>
+
+           
+            <div class="flex gap-1 mt-2">
+                <span class="px-2 py-1 rounded-full bg-red-50 text-red-500 text-[7px]">
+                     BUG
+                </span>
+
+                <span class="px-2 py-1 rounded-full bg-yellow-50 text-yellow-500 text-[7px]">
+                    HELP WANTED
+                </span>
+            </div>
+
+            <div class="border-t border-gray-200 mt-2 px-3 py-2">
+    <p class="text-[8px] text-gray-500">
+        #1 by <span class="text-gray-700">john_doe</span>
+    </p>
+
+    <p class="text-[8px] text-gray-400 mt-1">
+        11/15/2024
+    </p>
+</div>
+       </div>
+     </div>
+         <div class="border border-gray-200 border-t-2 border-t-green-500 rounded-sm bg-white shadow-sm">
+
+        <div class="flex justify-between items-center px-3 pt-3">
+            <span class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-500 text-[10px]">
+                ⓘ
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-red-50 text-red-400 text-[9px]">
+                HIGH
+            </span>
+        </div>
+
+       
+        <div class="px-3 py-2">
+            <h3 class="text-[10px] font-semibold text-gray-800">
+                Fix Navigation Menu On Mobile Devices
+            </h3>
+
+            <p class="text-[8px] text-gray-500 mt-3 leading-3">
+                The navigation menu doesn't collapse properly on mobile devices...
+            </p>
+
+           
+            <div class="flex gap-1 mt-2">
+                <span class="px-2 py-1 rounded-full bg-red-50 text-red-500 text-[7px]">
+                     BUG
+                </span>
+
+                <span class="px-2 py-1 rounded-full bg-yellow-50 text-yellow-500 text-[7px]">
+                    HELP WANTED
+                </span>
+            </div>
+
+            <div class="border-t border-gray-200 mt-2 px-3 py-2">
+    <p class="text-[8px] text-gray-500">
+        #1 by <span class="text-gray-700">john_doe</span>
+    </p>
+
+    <p class="text-[8px] text-gray-400 mt-1">
+        11/15/2024
+    </p>
+</div>
+       </div>
+     </div>
+         <div class="border border-gray-200 border-t-2 border-t-green-500 rounded-sm bg-white shadow-sm">
+
+        <div class="flex justify-between items-center px-3 pt-3">
+            <span class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-500 text-[10px]">
+                ⓘ
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-red-50 text-red-400 text-[9px]">
+                HIGH
+            </span>
+        </div>
+
+       
+        <div class="px-3 py-2">
+            <h3 class="text-[10px] font-semibold text-gray-800">
+                Fix Navigation Menu On Mobile Devices
+            </h3>
+
+            <p class="text-[8px] text-gray-500 mt-3 leading-3">
+                The navigation menu doesn't collapse properly on mobile devices...
+            </p>
+
+           
+            <div class="flex gap-1 mt-2">
+                <span class="px-2 py-1 rounded-full bg-red-50 text-red-500 text-[7px]">
+                     BUG
+                </span>
+
+                <span class="px-2 py-1 rounded-full bg-yellow-50 text-yellow-500 text-[7px]">
+                    HELP WANTED
+                </span>
+            </div>
+
+            <div class="border-t border-gray-200 mt-2 px-3 py-2">
+    <p class="text-[8px] text-gray-500">
+        #1 by <span class="text-gray-700">john_doe</span>
+    </p>
+
+    <p class="text-[8px] text-gray-400 mt-1">
+        11/15/2024
+    </p>
+</div>
+       </div>
+     </div>
+         <div class="border border-gray-200 border-t-2 border-t-green-500 rounded-sm bg-white shadow-sm">
+
+        <div class="flex justify-between items-center px-3 pt-3">
+            <span class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-500 text-[10px]">
+                ⓘ
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-red-50 text-red-400 text-[9px]">
+                HIGH
+            </span>
+        </div>
+
+       
+        <div class="px-3 py-2">
+            <h3 class="text-[10px] font-semibold text-gray-800">
+                Fix Navigation Menu On Mobile Devices
+            </h3>
+
+            <p class="text-[8px] text-gray-500 mt-3 leading-3">
+                The navigation menu doesn't collapse properly on mobile devices...
+            </p>
+
+           
+            <div class="flex gap-1 mt-2">
+                <span class="px-2 py-1 rounded-full bg-red-50 text-red-500 text-[7px]">
+                     BUG
+                </span>
+
+                <span class="px-2 py-1 rounded-full bg-yellow-50 text-yellow-500 text-[7px]">
+                    HELP WANTED
+                </span>
+            </div>
+
+            <div class="border-t border-gray-200 mt-2 px-3 py-2">
+    <p class="text-[8px] text-gray-500">
+        #1 by <span class="text-gray-700">john_doe</span>
+    </p>
+
+    <p class="text-[8px] text-gray-400 mt-1">
+        11/15/2024
+    </p>
+</div>
+       </div>
+     </div>
+         <div class="border border-gray-200 border-t-2 border-t-green-500 rounded-sm bg-white shadow-sm">
+
+        <div class="flex justify-between items-center px-3 pt-3">
+            <span class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-500 text-[10px]">
+                ⓘ
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-red-50 text-red-400 text-[9px]">
+                HIGH
+            </span>
+        </div>
+
+       
+        <div class="px-3 py-2">
+            <h3 class="text-[10px] font-semibold text-gray-800">
+                Fix Navigation Menu On Mobile Devices
+            </h3>
+
+            <p class="text-[8px] text-gray-500 mt-3 leading-3">
+                The navigation menu doesn't collapse properly on mobile devices...
+            </p>
+
+           
+            <div class="flex gap-1 mt-2">
+                <span class="px-2 py-1 rounded-full bg-red-50 text-red-500 text-[7px]">
+                     BUG
+                </span>
+
+                <span class="px-2 py-1 rounded-full bg-yellow-50 text-yellow-500 text-[7px]">
+                    HELP WANTED
+                </span>
+            </div>
+
+            <div class="border-t border-gray-200 mt-2 px-3 py-2">
+    <p class="text-[8px] text-gray-500">
+        #1 by <span class="text-gray-700">john_doe</span>
+    </p>
+
+    <p class="text-[8px] text-gray-400 mt-1">
+        11/15/2024
+    </p>
+</div>
+       </div>
+     </div>
+         <div class="border border-gray-200 border-t-2 border-t-green-500 rounded-sm bg-white shadow-sm">
+
+        <div class="flex justify-between items-center px-3 pt-3">
+            <span class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-500 text-[10px]">
+                ⓘ
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-red-50 text-red-400 text-[9px]">
+                HIGH
+            </span>
+        </div>
+
+       
+        <div class="px-3 py-2">
+            <h3 class="text-[10px] font-semibold text-gray-800">
+                Fix Navigation Menu On Mobile Devices
+            </h3>
+
+            <p class="text-[8px] text-gray-500 mt-3 leading-3">
+                The navigation menu doesn't collapse properly on mobile devices...
+            </p>
+
+           
+            <div class="flex gap-1 mt-2">
+                <span class="px-2 py-1 rounded-full bg-red-50 text-red-500 text-[7px]">
+                     BUG
+                </span>
+
+                <span class="px-2 py-1 rounded-full bg-yellow-50 text-yellow-500 text-[7px]">
+                    HELP WANTED
+                </span>
+            </div>
+
+            <div class="border-t border-gray-200 mt-2 px-3 py-2">
+    <p class="text-[8px] text-gray-500">
+        #1 by <span class="text-gray-700">john_doe</span>
+    </p>
+
+    <p class="text-[8px] text-gray-400 mt-1">
+        11/15/2024
+    </p>
+</div>
+       </div>
+     </div>
+    </div>
+
+    
+  </body>
+</html>

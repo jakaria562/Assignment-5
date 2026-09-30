@@ -1,0 +1,49 @@
+<!doctype html>
+<html class=" bg-base-200">
+  <head >
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Assaignment-5</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+      }
+      *{
+        font-family: "Geist", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen max-w-md bg-base-200 mx-auto pt-20 ">
+    <div class=" bg-white shadow-2xl rounded-2xl">
+     <div class="logo w-[80px] mx-auto pt-10 ">
+     <img src="assets/github-logo.png" alt="">
+   
+     </div>
+       <div class="text-center">
+          <h1 class="text-xl font-samibold">GitHub Issues Tracker</h1>
+        <p class="text-xs">Sign in to manage your issues</p>
+       </div>
+     <div class="from pt-2">
+         <div class="card bg-base-100 w-full max-w-sm shrink-0 mx-auto ">
+      <div class="card-body  pb-20">
+        <fieldset class="fieldset">
+          <label class="label font-semibold text-black">Username</label>
+          <input type="email" id="input-username" class="input" placeholder="Username" />
+          <p class="text-[#4A00FF] text-xs">Default: admin</p>
+          <label class="label font-semibold text-black">Password</label>
+          <input type="password" id="password-input" class="input" placeholder="Password" />
+          <p class="text-[#4A00FF] text-xs">Default: admin123</p>
+          <button id="singin-btn" class="btn btn-primary mt-4 ">Sign In</button>
+        </fieldset>
+      </div>
+     </div>
+    </div>
+    <script src="script/signin.js"></script>
+  </body>
+</html>
