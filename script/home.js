@@ -149,6 +149,28 @@ statusTabs.forEach((tab) => {
 
 });
 
-
-
 loadIssues();
+
+// search issue
+const searchBtn = document.getElementById("search-btn");
+
+searchBtn.addEventListener("click", async () => {
+
+    const searchInput = document.getElementById("search-input");
+
+    const searchValue = searchInput.value.trim();
+
+    if (searchValue === "") {
+        alert("Please enter something");
+        return;
+    }
+
+    const url =
+        `https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchValue}`;
+
+    const res = await fetch(url);
+
+    const data = await res.json();
+
+    displayIssues(data.data);
+});
