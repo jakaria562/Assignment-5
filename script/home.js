@@ -32,11 +32,12 @@ const displayIssues = (issues) => {
 
         div.innerHTML = `
 
-            <div class="border border-gray-200 border-t-2 ${
-                issue.status === "open"
-                    ? "border-t-green-500"
-                    : "border-t-purple-500"
-            } rounded-sm bg-white shadow-sm">
+          <div onclick="loadDetails(${issue.id})"
+    class="border border-gray-200 border-t-2 ${
+        issue.status === "open"
+            ? "border-t-green-500"
+            : "border-t-purple-500"
+    } rounded-sm bg-white shadow-sm cursor-pointer">
 
                 <div class="flex justify-between items-center px-3 pt-3">
 
@@ -149,18 +150,17 @@ statusTabs.forEach((tab) => {
 
 });
 
+
 loadIssues();
 
-// search issue
 const searchBtn = document.getElementById("search-btn");
 
 searchBtn.addEventListener("click", async () => {
 
     const searchInput = document.getElementById("search-input");
+ const searchValue = searchInput.value.trim();
 
-    const searchValue = searchInput.value.trim();
-
-    if (searchValue === "") {
+  if (searchValue === "") {
         alert("Please enter something");
         return;
     }
@@ -168,9 +168,85 @@ searchBtn.addEventListener("click", async () => {
     const url =
         `https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchValue}`;
 
-    const res = await fetch(url);
+  const res = await fetch(url);
 
-    const data = await res.json();
+ const data = await res.json();
 
     displayIssues(data.data);
 });
+
+const loadDetails = async (id) => {
+
+    const url =
+        `https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`;
+
+   const res = await fetch(url);
+
+  const data = await res.json();
+
+    displayDetails(data.data);
+};
+
+
+const displayDetails = (issue) => {
+
+ const detailsContainer =document.getElementById("details-container");
+
+    detailsContainer.innerHTML = `
+
+        <h2 class="text-xl font-bold text-gray-800">
+            ${issue.title}
+        </h2>
+
+        <div class="flex gap-2 mt-3">
+
+            <span class="px-3 py-1 rounded-full bg-green-100 text-green-600 text-xs">
+                ${issue.status.toUpperCase()}
+            </span>
+
+            <span class="text-xs text-gray-500">
+                Opened by ${issue.author}
+            </span>
+
+        </div>
+
+        <div class="flex flex-wrap gap-2 mt-4">
+       ${issue.labels.map((label) => `
+                <span class="px-2 py-1 rounded-full bg-gray-100 text-gray-500 text-xs">
+              ${label.toUpperCase()}
+                </span>
+            `).join("")}
+
+        </div>
+
+  <p class="text-sm text-gray-500 mt-4">
+         ${issue.description}
+        </p>
+
+     <div class="bg-gray-50 rounded-lg p-4 mt-5">
+
+            <p class="text-sm text-gray-500">
+                Assignee:         </p>
+
+            <p class="font-semibold">
+                ${issue.assignee}
+            </p>
+
+            <p class="text-sm text-gray-500 mt-3">
+                Priority:
+            </p>
+            <p class="font-semibold">
+             ${issue.priority.toUpperCase()}
+            </p>
+            <p class="text-sm text-gray-500 mt-3">
+          Created At:
+            </p>
+
+     <p class="font-semibold">
+                ${issue.createdAt}
+            </p>
+        </div>
+    `;
+
+    document.getElementById("issue_details").showModal();
+};
