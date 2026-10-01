@@ -9,7 +9,7 @@ document.getElementById("singin-btn").addEventListener("click", function(){
   console.log(password)
   if(username=="admin" && password=="admin123"){
     alert("Sign In Successfull")
-    window.location.assign("/home.html")
+    window.location.assign("./home.html");
   }else{
     alert("Sign In Failed");
     return;

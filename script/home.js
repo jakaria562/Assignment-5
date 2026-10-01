@@ -11,9 +11,9 @@ loading.classList.remove("hidden");
     const url =
         "https://phi-lab-server.vercel.app/api/v1/lab/issues";
 
-    const res = await fetch(url);
+  const res = await fetch(url);
 
-    const data = await res.json();
+  const data = await res.json();
 
     allIssues = data.data;
         
@@ -31,11 +31,9 @@ const displayIssues = (issues) => {
 
     issues.forEach((issue) => {
 
-        const div = document.createElement("div");
-
+   const div = document.createElement("div");
 
         div.innerHTML = `
-
           <div onclick="loadDetails(${issue.id})"
     class="border border-gray-200 border-t-2 ${
         issue.status === "open"
@@ -46,13 +44,13 @@ const displayIssues = (issues) => {
                 <div class="flex justify-between  items-center px-3 pt-3">
 
                     <img
-                        class="w-5 "
+                       class="w-5 "
                         src="assets/${issue.status}-Status.png"
-                        alt="${issue.status}"
-                    >
+                  alt="${issue.status}"
+                  >
 
                     <span class="px-3 py-1 rounded-full bg-red-50 text-red-400 text-[9px]">
-                        ${issue.priority.toUpperCase()}
+                              ${issue.priority.toUpperCase()}
                     </span>
 
                 </div>
@@ -72,33 +70,29 @@ const displayIssues = (issues) => {
 
                     <div class="flex flex-wrap  gap-1 mt-2">
 
-                        ${issue.labels.map((label) => `
+                 ${issue.labels.map((label) => `
 
                             <span class="px-2 py-1 rounded-full bg-yellow-300 text-gray-500 text-[7px]">
                                 ${label.toUpperCase()}
                             </span>
 
-                        `).join("")}
+              `).join("")}
+                 </div>
 
-                    </div>
-
-
-                    <div class="border-t border-gray-200 mt-2 px-3 py-2">
-
-                        <p class="text-[8px] text-gray-500">
+            <div class="border-t border-gray-200 mt-2 px-3 py-2">
+              <p class="text-[8px] text-gray-500">
                             #${issue.id} by
-                            <span class="text-gray-700">
-                                ${issue.author}
-                            </span>
-                        </p>
+           <span class="text-gray-700">
+                       ${issue.author}
+                    </span>
+                </p>
 
-                        <p class="text-[8px] text-gray-400 mt-1">
+          <p class="text-[8px] text-gray-400 mt-1">
                             ${issue.createdAt}
-                        </p>
-
-                    </div>
+      </p>
 
                 </div>
+              </div>
 
             </div>
 
@@ -145,7 +139,7 @@ statusTabs.forEach((tab) => {
             item.classList.add("btn-soft");
         });
 
-        tab.classList.remove("btn-soft");
+   tab.classList.remove("btn-soft");
         tab.classList.add("btn-primary");
 
         filterIssues(tab.value);
@@ -201,23 +195,21 @@ const displayDetails = (issue) => {
         <h2 class="text-xl font-bold text-gray-800">
             ${issue.title}
         </h2>
-
         <div class="flex gap-2 mt-3">
 
             <span class="px-3 py-1 rounded-full bg-green-100 text-green-600 text-xs">
                 ${issue.status.toUpperCase()}
             </span>
 
-            <span class="text-xs text-gray-500">
+    <span class="text-xs text-gray-500">
                 Opened by ${issue.author}
             </span>
 
         </div>
-
         <div class="flex flex-wrap gap-2 mt-4">
        ${issue.labels.map((label) => `
                 <span class="px-2 py-1 rounded-full bg-gray-100 text-gray-500 text-xs">
-              ${label.toUpperCase()}
+        ${label.toUpperCase()}
                 </span>
             `).join("")}
 
@@ -231,18 +223,17 @@ const displayDetails = (issue) => {
 
             <p class="text-sm text-gray-500">
                 Assignee:         </p>
-
             <p class="font-semibold">
                 ${issue.assignee}
             </p>
 
-            <p class="text-sm text-gray-500 mt-3">
+        <p class="text-sm text-gray-500 mt-3">
                 Priority:
             </p>
-            <p class="font-semibold">
+          <p class="font-semibold">
              ${issue.priority.toUpperCase()}
             </p>
-            <p class="text-sm text-gray-500 mt-3">
+    <p class="text-sm text-gray-500 mt-3">
           Created At:
             </p>
 
