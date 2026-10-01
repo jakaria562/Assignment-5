@@ -5,7 +5,9 @@ const issuesContainer = document.getElementById("issues-container");
 
 
 const loadIssues = async () => {
+  const loading = document.getElementById("loading");
 
+loading.classList.remove("hidden");
     const url =
         "https://phi-lab-server.vercel.app/api/v1/lab/issues";
 
@@ -17,6 +19,7 @@ const loadIssues = async () => {
         
    document.getElementById("total-issues").innerText = allIssues.length;
     displayIssues(allIssues);
+    loading.classList.add("hidden");
 };
 
 
@@ -40,10 +43,10 @@ const displayIssues = (issues) => {
             : "border-t-purple-500"
     } rounded-sm bg-white shadow-sm cursor-pointer">
 
-                <div class="flex justify-between items-center px-3 pt-3">
+                <div class="flex justify-between  items-center px-3 pt-3">
 
                     <img
-                        class="w-5"
+                        class="w-5 "
                         src="assets/${issue.status}-Status.png"
                         alt="${issue.status}"
                     >
