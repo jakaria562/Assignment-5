@@ -45,12 +45,22 @@
 </div>
       
     </header>
-    <div class="min-h-screen max-w-5xl  bg-base-200 mx-auto mt-7">
-          <div id="status-tabs" class=" bg-white shadow-sm pt-3 pb-3 pl-3">
-    <button value="all" type="button" class="btn btn-soft btn-primary">All</button>
-    <button value="open" type="button" class="btn btn-soft btn-primary">Open</button>
-    <button value="close" type="button" class="btn btn-soft btn-primary">Closed</button>
-    </div>
+    <section class="min-h-screen max-w-5xl  bg-base-200 mx-auto mt-7">
+          <div id="status-tabs" class="bg-white  shadow-sm pt-3 pb-3 pl-3">
+
+    <button value="all" type="button" class="status-btn btn btn-primary">
+        All
+    </button>
+
+    <button value="open" type="button" class="status-btn btn btn-soft">
+        Open
+    </button>
+
+    <button value="closed" type="button" class="status-btn btn btn-soft">
+        Closed
+    </button>
+
+</div>
 
      <div class="shadow-sm bg-base-200  px-4 py-3">
 
@@ -85,8 +95,9 @@
 </div>
     <div id="issues-container"class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-4">
 
-      
+
 </div>
+    </section>
 
     <script src="script/home.js"></script>
   </body>
