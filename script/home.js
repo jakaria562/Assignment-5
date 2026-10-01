@@ -14,7 +14,8 @@ const loadIssues = async () => {
     const data = await res.json();
 
     allIssues = data.data;
-
+        
+   document.getElementById("total-issues").innerText = allIssues.length;
     displayIssues(allIssues);
 };
 
@@ -66,11 +67,11 @@ const displayIssues = (issues) => {
                     </p>
 
 
-                    <div class="flex flex-wrap gap-1 mt-2">
+                    <div class="flex flex-wrap  gap-1 mt-2">
 
                         ${issue.labels.map((label) => `
 
-                            <span class="px-2 py-1 rounded-full bg-gray-100 text-gray-500 text-[7px]">
+                            <span class="px-2 py-1 rounded-full bg-yellow-300 text-gray-500 text-[7px]">
                                 ${label.toUpperCase()}
                             </span>
 
@@ -112,7 +113,7 @@ const displayIssues = (issues) => {
 const filterIssues = (status) => {
 
     if (status === "all") {
-
+        document.getElementById("total-issues").innerText = allIssues.length;
         displayIssues(allIssues);
 
     } else {
@@ -120,7 +121,7 @@ const filterIssues = (status) => {
         const filteredIssues = allIssues.filter(
             (issue) => issue.status === status
         );
-
+      document.getElementById("total-issues").innerText = filteredIssues.length;
         displayIssues(filteredIssues);
 
     }
